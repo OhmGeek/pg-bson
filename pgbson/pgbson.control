@@ -1,0 +1,5 @@
+comment = 'pgbson:  Created by pgrx'
+default_version = '@CARGO_VERSION@'
+module_pathname = '$libdir/pgbson'
+relocatable = false
+superuser = true
