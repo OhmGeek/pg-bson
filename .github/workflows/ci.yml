@@ -16,6 +16,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+
+    - name: Install Postgres deps
+      run: |
+        sudo apt-get update -y -qq --fix-missing
+        sudo apt-get install -y postgresql-server-dev-14
+    - name: Install postgres Cargo dependencies
+      run: cargo pgrx init
     - name: Build
       run: cargo build --verbose
     - name: Run tests
